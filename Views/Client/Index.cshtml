@@ -1,0 +1,30 @@
+@model IEnumerable<ProjetCsharpExamMbathio.Models.Entities.Client>
+
+<h1>Clients</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td>@client.Id</td>
+                <td>@client.Nom</td>
+                <td>@client.Prenom</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@client.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@client.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Create New Client</a>

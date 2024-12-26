@@ -1,0 +1,21 @@
+@model ProjetCsharpExamMbathio.Models.Entities.Client
+
+<h1>Create Client</h1>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="Nom"></label>
+        <input asp-for="Nom" />
+        <span asp-validation-for="Nom"></span>
+    </div>
+    <div>
+        <label asp-for="Prenom"></label>
+        <input asp-for="Prenom" />
+        <span asp-validation-for="Prenom"></span>
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+</form>
+
+<a asp-action="Index">Back to List</a>

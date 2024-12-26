@@ -1,0 +1,30 @@
+@model IEnumerable<ProjetCsharpExamMbathio.Models.Entities.Livraison>
+
+<h1>Deliveries</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Adresse de Livraison</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var livraison in Model)
+        {
+            <tr>
+                <td>@livraison.Id</td>
+                <td>@(livraison.DateLivraison.HasValue ? livraison.DateLivraison.Value.ToShortDateString() : "N/A")</td>
+                <td>@livraison.AdresseLivraison</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@livraison.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@livraison.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Create New Delivery</a>

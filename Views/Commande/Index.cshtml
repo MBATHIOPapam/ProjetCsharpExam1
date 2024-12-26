@@ -1,0 +1,30 @@
+@model IEnumerable<ProjetCsharpExamMbathio.Models.Entities.Commande>
+
+<h1>Commandes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Montant</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var commande in Model)
+        {
+            <tr>
+                <td>@commande.Id</td>
+                <td>@(commande.Date.HasValue ? commande.Date.Value.ToShortDateString() : "N/A")</td>
+                <td>@commande.Montant</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@commande.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@commande.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Create New Commande</a>

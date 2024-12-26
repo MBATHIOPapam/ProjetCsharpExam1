@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Accueil";
+}
+
+<div class="container mt-4">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Bienvenue dans votre système de gestion</h1>
+        <p class="lead">Gérez vos commandes, livraisons et paiements en un seul endroit</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Commandes</h5>
+                    <p class="card-text">Gérez les commandes des clients</p>
+                    <a href="@Url.Action("Index", "Commande")" class="btn btn-primary">Voir les commandes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Livraisons</h5>
+                    <p class="card-text">Suivez les livraisons en cours</p>
+                    <a href="@Url.Action("Index", "Livraison")" class="btn btn-primary">Gérer les livraisons</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Produits</h5>
+                    <p class="card-text">Gérez votre catalogue de produits</p>
+                    <a href="@Url.Action("Index", "Produit")" class="btn btn-primary">Voir les produits</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Clients</h5>
+                    <p class="card-text">Gérez vos clients</p>
+                    <a href="@Url.Action("Index", "Client")" class="btn btn-primary">Voir les clients</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Livreurs</h5>
+                    <p class="card-text">Gérez votre équipe de livraison</p>
+                    <a href="@Url.Action("Index", "Livreur")" class="btn btn-primary">Voir les livreurs</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Paiements</h5>
+                    <p class="card-text">Suivez les paiements</p>
+                    <a href="@Url.Action("Index", "Paiement")" class="btn btn-primary">Voir les paiements</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

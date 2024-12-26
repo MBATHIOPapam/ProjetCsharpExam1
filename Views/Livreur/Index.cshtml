@@ -1,0 +1,32 @@
+@model IEnumerable<ProjetCsharpExamMbathio.Models.Entities.Livreur>
+
+<h1>Deliverers</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Telephone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var livreur in Model)
+        {
+            <tr>
+                <td>@livreur.Id</td>
+                <td>@livreur.Nom</td>
+                <td>@livreur.Prenom</td>
+                <td>@livreur.Telephone</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@livreur.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@livreur.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Create New Deliverer</a>

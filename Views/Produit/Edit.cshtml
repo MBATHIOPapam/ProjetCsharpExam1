@@ -1,0 +1,35 @@
+@model ProjetCsharpExamMbathio.Models.Entities.Produit
+
+<h1>Edit Produit</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Libelle"></label>
+        <input asp-for="Libelle" class="form-control" />
+        <span asp-validation-for="Libelle" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="QuantiteEnStock"></label>
+        <input asp-for="QuantiteEnStock" class="form-control" />
+        <span asp-validation-for="QuantiteEnStock" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PrixUnitaire"></label>
+        <input asp-for="PrixUnitaire" class="form-control" />
+        <span asp-validation-for="PrixUnitaire" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="QuantiteSeuil"></label>
+        <input asp-for="QuantiteSeuil" class="form-control" />
+        <span asp-validation-for="QuantiteSeuil" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Images"></label>
+        <input asp-for="Images" class="form-control" />
+        <span asp-validation-for="Images" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<a asp-action="Index">Back to List</a>
